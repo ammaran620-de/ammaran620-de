@@ -27,7 +27,7 @@
 ## 🚀 Featured Projects
 - 🌐 **[Personal Portfolio Website](#)** → Showcasing my design skills  
 - 📄 **[Frontend Projects](#)** → Responsive websites & UI design samples  
-- 🤖 **[UAV Vision Project](#)** → Visual navigation 
+- 🤖 **[UAV Vision Project](#)** → Visual navigation  
 
 ---
 
@@ -41,8 +41,8 @@
 
 ## 📫 Connect with Me
 <p align="left">
-  <a href="mailto:your@email.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white" /></a>
-  <a href="https://linkedin.com/in/your-profile"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" /></a>
+  <a href="mailto:ammaran620@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white" /></a>
+  <a href="https://linkedin.com/in/ammara-noor"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" /></a>
   <a href="https://your-portfolio.com"><img src="https://img.shields.io/badge/Portfolio-FF6F00?style=flat&logo=firefox&logoColor=white" /></a>
 </p>
 
