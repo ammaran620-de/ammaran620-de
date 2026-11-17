@@ -26,7 +26,7 @@ PatchCore detector trained on defect-free images only, served with FastAPI and t
 Recorded CPU and integrated-GPU benchmarks for YOLO26n across PyTorch, ONNX Runtime and OpenVINO, a regression gate with unit tests (run on Linux, Windows and macOS in CI), and a local in-browser WebGPU build. The accuracy gap between PyTorch and the exported runtimes is documented, not explained.
 
 **[Ayah Feedback Lab](https://github.com/ammaran620-de/ayah-feedback-lab)**
-Research prototype: can a speech model get every word right and still miss a pronunciation error? Whisper wording check plus an acoustic classifier on two ayahs, evaluated on 144 held-out clips with its false flags shown. Not a teaching tool.
+Research prototype: can a speech model get every word right and still miss a pronunciation error? Whisper wording check plus an acoustic classifier on two ayahs, evaluated on 144 held-out clips with its false flags shown. Its output is meant for review with a qualified teacher.
 
 **[Radar Loop Study](https://github.com/ammaran620-de/radar-loop-study)**
 Study validating loop-closure candidates on public radar data, using the authors' frozen RadarLoc checkpoint.
