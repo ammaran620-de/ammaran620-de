@@ -31,9 +31,24 @@ Currently deepening **C++ and edge inference** — getting models onto constrain
 
 ---
 
-## Featured project
+## Featured projects
 
-### [Industrial Anomaly Detection — MLOps Pipeline](https://github.com/ammaran620-de/industrial-anomaly-detection-mlops)
+### [Fabric Defect Inspection](https://github.com/ammaran620-de/Febric-Defect) · [Live demo](https://ammaran620-de.github.io/Febric-Defect/)
+
+YOLOv8n detector with a FastAPI service, an inspection log and a dashboard. The demo runs the model in your browser, so nothing is uploaded.
+
+| | YOLOv8n | OpenCV baseline |
+|:---|---:|---:|
+| Precision / recall | 0.887 / 0.852 | 0.140 / 0.069 |
+| F1 | **0.869** | 0.093 |
+
+Held-out set of 80 images and 101 defects: 86 found, 15 missed, 11 false alarms. Thread errors are the weak class (recall 0.70). The README lists what the dataset cannot show, including no defect-free images.
+
+`YOLOv8` `FastAPI` `ONNX` `SQLite` `pytest` `GitHub Actions`
+
+---
+
+### [Industrial Anomaly Detection: MLOps Pipeline](https://github.com/ammaran620-de/industrial-anomaly-detection-mlops)
 
 **A defect detector that never sees a defect during training.**
 
