@@ -8,7 +8,7 @@ BS Computer Engineering, NUTECH (2026). I build computer vision and Python AI pr
 
 ## Public prototypes
 
-**[Fabric Defect Inspection](https://github.com/ammaran620-de/Febric-Defect)** ([live demo](https://ammaran620-de.github.io/Febric-Defect/))
+**[Fabric Defect Inspection](https://github.com/ammaran620-de/Febric-Defect)** ([live demo](https://ammaran620-de.github.io/Febric-Defect/docs/))
 YOLOv8n defect detection for textile images with a FastAPI service, an inspection log and a dashboard. On its 80-image validation split, class-agnostic F1 is 0.869 (a box counts if it overlaps a labelled defect) against 0.093 for an OpenCV baseline, and class-aware F1 is 0.848. There is no separate test set. The demo runs the model in your browser.
 
 **[SiteSignal Delay Intelligence](https://github.com/ammaran620-de/sitesignal-delay-intelligence)**
