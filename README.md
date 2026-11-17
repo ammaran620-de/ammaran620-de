@@ -1,110 +1,51 @@
-<h1 align="center">Ammara Noor</h1>
+# Ammara Noor
 
-<p align="center">
-  <b>Computer Vision Engineer</b><br>
-  I ship vision systems that run on live cameras — not just in notebooks.
-</p>
+**AI engineer building visual inspection systems and intelligent workflows with Python, computer vision, and applied machine learning.**
 
-<p align="center">
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
-  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white" />
-  <img src="https://img.shields.io/badge/YOLOv8-111F68?style=flat-square&logo=yolo&logoColor=white" />
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
-  <img src="https://img.shields.io/badge/MLflow-0194E2?style=flat-square&logo=mlflow&logoColor=white" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
-</p>
+BS Computer Engineering, NUTECH (2026). I build computer vision and Python AI projects end to end: data, model, evaluation, API and interface. Each project below states its numbers, how they were measured, and where they stop being valid.
 
-<p align="center">
-  <a href="mailto:ammaran620@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" /></a>
-  <a href="https://linkedin.com/in/ammaranoorkhan"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
-  <img src="https://img.shields.io/badge/Lahore,_Pakistan-333?style=flat-square&logo=googlemaps&logoColor=white" />
-  <img src="https://img.shields.io/badge/Open_to_work-0E9E70?style=flat-square" />
-</p>
+[Portfolio](https://ammaranoor.vercel.app) · [Email](mailto:ammaran620@gmail.com) · [LinkedIn](https://linkedin.com/in/ammaranoorkhan)
 
----
+## Public prototypes
 
-### What I actually do
+**[Fabric Defect Inspection](https://github.com/ammaran620-de/Febric-Defect)** ([live demo](https://ammaran620-de.github.io/Febric-Defect/))
+YOLOv8n defect detection for textile images with a FastAPI service, an inspection log and a dashboard. On its 80-image validation split, class-agnostic F1 is 0.869 (a box counts if it overlaps a labelled defect) against 0.093 for an OpenCV baseline, and class-aware F1 is 0.848. There is no separate test set. The demo runs the model in your browser.
 
-Take a model from **on-site data collection** → **training** → **evaluation you can defend** → **REST API and dashboard**. My defect-detection work runs on live camera input inside a working textile mill, and I have collected and labelled the data myself, on the factory floor, at 6am.
+**[SiteSignal Delay Intelligence](https://github.com/ammaran620-de/sitesignal-delay-intelligence)**
+Construction delay analysis on synthetic project data. A deterministic critical-path engine does the schedule maths and is tested without any model; an LLM agent selects tools and explains the results, and its citations are checked against what the tools returned. The 80 tests use a scripted stand-in for Gemini, so they do not show that the live model answers well. It needs your own Gemini API key.
 
-Currently deepening **C++ and edge inference** — getting models onto constrained hardware.
+**[EHR Review Desk](https://github.com/ammaran620-de/ehr-review-desk)**
+Streamlit dashboard that flags unusual access patterns in synthetic health-record data with Isolation Forest and SHAP. Synthetic data only.
 
----
+## Recorded benchmarks and research
 
-## Featured projects
+**[Industrial Anomaly Detection MLOps](https://github.com/ammaran620-de/industrial-anomaly-detection-mlops)**
+PatchCore detector trained on defect-free images only, served with FastAPI and tracked in MLflow. The recorded run on MVTec AD carpet reached image AUROC 0.9956 (coreset ratio 0.05, 320 px), with its threshold taken from the test set's own good images. The code now validates checkpoints on load, seeds training and calibrates the threshold on held-out normal training images; the recorded run has not been repeated with that change, and the README keeps the original figures labelled as historical. Latency has not been measured.
 
-### [Fabric Defect Inspection](https://github.com/ammaran620-de/Febric-Defect) · [Live demo](https://ammaran620-de.github.io/Febric-Defect/)
+**[Foundry](https://github.com/ammaran620-de/foundry)**
+Recorded CPU and integrated-GPU benchmarks for YOLO26n across PyTorch, ONNX Runtime and OpenVINO, a regression gate with unit tests (run on Linux, Windows and macOS in CI), and a local in-browser WebGPU build. The accuracy gap between PyTorch and the exported runtimes is documented, not explained.
 
-YOLOv8n detector with a FastAPI service, an inspection log and a dashboard. The demo runs the model in your browser, so nothing is uploaded.
+**[Ayah Feedback Lab](https://github.com/ammaran620-de/ayah-feedback-lab)**
+Research prototype: can a speech model get every word right and still miss a pronunciation error? Whisper wording check plus an acoustic classifier on two ayahs, evaluated on 144 held-out clips with its false flags shown. Not a teaching tool.
 
-| | YOLOv8n | OpenCV baseline |
-|:---|---:|---:|
-| Precision / recall | 0.887 / 0.852 | 0.140 / 0.069 |
-| F1 | **0.869** | 0.093 |
+**[Radar Loop Study](https://github.com/ammaran620-de/radar-loop-study)**
+Study validating loop-closure candidates on public radar data, using the authors' frozen RadarLoc checkpoint.
 
-Held-out set of 80 images and 101 defects: 86 found, 15 missed, 11 false alarms. Thread errors are the weak class (recall 0.70). The README lists what the dataset cannot show, including no defect-free images.
+## Other
 
-`YOLOv8` `FastAPI` `ONNX` `SQLite` `pytest` `GitHub Actions`
+- [Harvest Web Scraper](https://github.com/ammaran620-de/harvest-web-scraper): a scraper that traces each record back to its source page.
 
----
+## Professional work (not in these repositories)
 
-### [Industrial Anomaly Detection: MLOps Pipeline](https://github.com/ammaran620-de/industrial-anomaly-detection-mlops)
+- AI and Computer Vision Engineer, Robionix Technologies, part-time, 2024 to 2026: labelled mill-floor images, trained YOLOv8 on three defect classes and tuned thresholds after reviewing false positives.
+- Full-Stack AI Developer, Evolvian Softwares, August 2025 to January 2026: document-review endpoints and dashboards.
+- AI and UAV Engineering Intern, National Development Complex, July to September 2025: person tracking and vehicle detection.
+- MagicQC, a garment-measurement workflow, is proprietary and under NDA. No code, data or results from it appear in my public repositories.
 
-**A defect detector that never sees a defect during training.**
+## Skills used in these repositories
 
-Supervised inspection only finds defects you thought to label. On a real line, the dangerous ones are the ones nobody has seen. So this learns what *normal* looks like — frozen CNN, patch-level memory bank, greedy k-center coreset kept at 1% — and flags anything far from it.
+Python, PyTorch, Ultralytics YOLO, OpenCV, scikit-learn, ONNX Runtime, FastAPI, Streamlit, MLflow, SQLite, pytest, Docker, GitHub Actions.
 
-| Metric | Result |
-|:---|:---|
-| Image AUROC | **0.9956** |
-| Precision / recall / F1 | 0.9775 |
-| Accuracy | 0.9658 |
-| Confusion | 87 caught · 26 passed · 2 missed · 2 false alarms |
-| Inference | 535 ms / image on CPU |
-| Dataset | MVTec AD carpet, 117 test images |
+## Get in touch
 
-**What the number hides.** All four errors sit in a narrow score band, 2.02–2.19. Below it, defects are indistinguishable from high-variance normal carpet; above it, separation is clean. One colour defect cleared the 2.1189 threshold by 0.00004 — recall of 0.9775 rests on that margin. The distributions genuinely overlap, so no threshold fixes it. That overlap is why AUROC is 0.9956 and not 1.0.
-
-**What it does not do.** 535 ms per image does not meet the 33 ms a 30 fps line requires. Documented under limitations with the optimisation path — ONNX export, INT8 quantisation, coreset reduction — rather than quietly omitted.
-
-`PatchCore` `PyTorch` `MLflow` `FastAPI` `Docker` `pytest` `GitHub Actions`
-
----
-
-## Experience
-
-**Computer Vision Engineer** (part-time) · Robionix Technologies · *Feb – Jun 2026*
-Built **MagicQC**, pairing YOLOv8 detection with PatchCore anomaly detection so known *and* unseen defect types are caught by one pipeline. ~1,600 images self-collected on-site at a textile mill; 95% accuracy on a held-out test split across 3 defect classes. Full path from camera capture to React alert dashboard. Exhibited at the **32nd Textile Asia Expo, Lahore** — evaluation interest from Nishat Mills, Gul Ahmed and Sapphire.
-
-**Full-Stack AI Developer** · Evolvian Softwares · *Aug 2025 – Jan 2026*
-YOLOv8, OCR and RAG pipelines integrated into client-facing production web applications.
-
-**AI and UAV Intern** · NDC, NESCOM · *Jul – Sep 2025*
-Person tracking and vehicle detection on live aerial video — moving camera, changing light, real-time constraints.
-
----
-
-## Toolkit
-
-| | |
-|:---|:---|
-| **Vision** | Object detection · segmentation · anomaly detection · OCR · tracking · real-time video |
-| **ML** | PyTorch · TensorFlow · OpenCV · Ultralytics · scikit-learn · NumPy |
-| **ML engineering** | MLflow · FastAPI · ONNX · Docker · pytest · latency profiling |
-| **Languages** | Python · JavaScript · SQL · C/C++ |
-| **Full-stack** | React · Next.js · Node.js · REST APIs · MySQL |
-| **Hardware** | GigE Vision & line-scan cameras · OAK depth cameras |
-
----
-
-## Background
-
-**BS Computer Engineering** — NUTECH Islamabad, 2026
-
-🥇 **1st Place** — ICAT National Robotics Competition 2025
-🎓 **Millennium Fellow** — UN Academic Impact Program
-👩‍💻 **Chair** — IEEE Women in Engineering, NUTECH
-
----
-
-<p align="center"><i>Open to computer vision and ML engineering roles — Lahore, Islamabad, Karachi or remote.</i></p>
+Email or LinkedIn, as linked at the top.
